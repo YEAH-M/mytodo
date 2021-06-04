@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <title>My_image02</title>
+
+    <script>
+
+
+   function draw() {
+    var ctx = document.getElementById('canvas').getContext('2d');
+  for (var i=0;i<6;i++){
+    for (var j=0;j<6;j++){
+      ctx.fillStyle = 'rgb(' + Math.floor(255-42.5*i) + ',' +
+                       Math.floor(255-42.5*j) + ',0)';
+      ctx.fillRect(j*25,i*25,25,25);
+    }
+  }
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+
+    ctx.fillRect(25, 25, 1000, 1000);
+    ctx.clearRect(45, 45, 200, 200);
+    ctx.strokeRect(50, 50, 190, 190);
+    ctx.fillStyle = "orange";
+    ctx.strokeStyle = "orange";
+  }
+}
+
+    </script>
+
+
+
+</head>
+
+<body onload="draw();">
+    <h1>canvas02</h1>
+    <canvas id="canvas" width="300" height="300"></canvas>
+</body>
+
+<html>
